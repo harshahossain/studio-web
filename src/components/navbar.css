@@ -1,0 +1,92 @@
+.active {
+  background-color: #264290;
+}
+
+.navb {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  top: 0%;
+  position: sticky;
+}
+.navb .BrandLogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  margin: 1rem;
+}
+
+.navb ul {
+  display: flex;
+}
+
+.navb ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem;
+  margin: 0 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+nav ul li a:not(.active):hover {
+  background-color: #172554;
+}
+
+.navb .HamMenu {
+  /* display: flex; */
+  /* display flex na dile hidden hochhe 
+  but it doesnt matter anyway since it will only show via media query */
+  position: absolute;
+  top: 0.75rem;
+  right: 0.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2.25rem;
+  height: 2rem;
+}
+
+.navb .HamMenu span {
+  height: 0.3rem;
+  width: 100%;
+  /* 100% widht of its parent */
+  background-color: #fff;
+  border-radius: 0.2rem;
+}
+
+@media (max-width: 480px) {
+  .navb .HamMenu {
+    display: flex;
+  }
+
+  .navb {
+    flex-direction: column;
+    align-items: start;
+  }
+  .navb ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+
+  .navb ul.hamOpen {
+    display: flex;
+  }
+
+  .navb ul li {
+    width: 100%;
+    text-align: center;
+  }
+  .navb ul li a {
+    margin: 0.2rem 0.5rem;
+  }
+}
