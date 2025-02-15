@@ -39,3 +39,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+// need to start from here again and design
